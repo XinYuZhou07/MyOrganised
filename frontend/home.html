@@ -9,29 +9,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-custom" id="mainNavbar">
-    <div class="container-fluid">
-      <a class="navbar-brand-container" href="#">
-        <span class="navbar-brand-text" style="text-decoration: none !important; color: white;;">MyOrganized</span>
-      </a>
-      <button class="navbar-toggler custom-mobile-toggler" type="button" id="mobileMenuToggler" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">Panoramica</a></li>
-          <li class="nav-item"><a class="nav-link" href="#store">Store</a></li>
-          <li class="nav-item"><a class="nav-link" href="#plan">Planner</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-    <div id="why" class="anchor" style="padding-top: 12%;"></div>
-    <div class="container-md mx-0 py-8 bg-body-secondary content-section" style="width: 45%; margin-left: 50px !important; margin-top: -20px !important; padding-bottom: 50%;"></div>
-        
+  <script>
+      const accessKey = "4f2742482d50f95 6c8a8529b67a65ca5";
+      const city = "Milan";
+
+      fetch(`http://api.weatherstack.com/current?access_key=${accessKey}&query=${city}`)
+          .then(res => res.json())
+          .then(data => {
+              document.getElementById("result").textContent =
+                  `${data.current.temperature}°`;
+          })
+          .catch(err => console.error(err));
+  </script>
+
+  <body>
+      <nav class="topbar">
+        <div class="topbar-left">
+          <span class="brand">MyOrganized</span>
+    
+          <div class="topbar-menu">
+            <a href="#" class="active">Panoramica</a>
+            <a href="#store">Store</a>
+            <a href="#plan">Planner</a>
+          </div>
         </div>
-    </div>
+    
+        <div class="topbar-right">
+          <span class="username">John Appleseed</span>
+          <img src="avatar.jpg" class="avatar">
+        </div>
+      </nav>
+    
+      <div style="display: flex; display: inline;">
+          <div class="container-md mx-0 py-8 bg-body-secondary content-section" style="width: 45%; margin-left: 50px !important; padding-bottom: 45%;">
+              <h1 class="superTitle">18</h1>
+              <div class="side-panel" style="margin-top: 40px;">
+                  <h5 style="font-size: 25px;">Martedì</h5>
+                  <p class="small mb-3" style="font-weight: 200; font-size: 25px; margin-top: -12px !important;">Novembre</p>
+              </div>
+              <div style="text-align: right; margin-top: 40px; width: 40%; margin-left: auto; margin-right: 20px;">
+                <h3 style="font-weight: 200; font-size: 35px;" id="result">Attendo il Meteo...</h3>
+                <h3 style="font-weight: 400; font-size: 15px;">Milano, Lombardia.</h3>
+              </div>
+          </div>
+        </div>
     </body>
 </html>
