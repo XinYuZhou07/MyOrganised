@@ -1,0 +1,51 @@
+    /* Effetto glass specifico per la Navbar */
+    .navbar-custom {
+      border-radius: 5px;
+      width: 90%;
+      margin: 2% auto 0 auto;
+      padding: 15px 20px 10px 20px;
+      background: #484848 !important;
+      backdrop-filter: blur(2px) saturate(30%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+                  inset 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      transition: width 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                  border-radius 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                  transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                  padding 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      z-index: 1060; 
+      color: inherit !important;
+      text-decoration: none !important; 
+    }
+
+    body{
+        background-color: #F5F5F5;
+
+    }
+
+    .nav-link {
+      color: rgb(255, 255, 255) !important;
+      font-weight: 400;
+      font-size: large;
+      margin-right: 10px !important;
+      border-radius: 20px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        font-weight: 700;
+    }
+
+    .container-md {
+      margin-top: 3% !important;
+      padding-bottom: 15px;
+      background: rgba(255, 255, 255, 0.15) !important;
+      backdrop-filter: blur(2px) saturate(180%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      border-radius: 5px !important;
+      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2),
+                  inset 0 4px 20px rgba(255, 255, 255, 0.3) !important;
+    }
