@@ -133,10 +133,10 @@
   position: absolute; 
   right: 10px;
   background-color: #FF8C00;
-  padding: 12px 15px;
+  padding: 16px 15px;
   border: none;
   border-radius: 5px;
-  transform: translateY(25%);
+  transform: translateY(19%);
   width: 100px;
 }
 .filters-container{
