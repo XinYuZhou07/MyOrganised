@@ -1,51 +1,273 @@
-    /* Effetto glass specifico per la Navbar */
-    .navbar-custom {
-      border-radius: 5px;
-      width: 90%;
-      margin: 2% auto 0 auto;
-      padding: 15px 20px 10px 20px;
-      background: #484848 !important;
-      backdrop-filter: blur(2px) saturate(30%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.8) !important;
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
-                  inset 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-      transition: width 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                  border-radius 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                  transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
-                  padding 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-sizing: border-box;
-      z-index: 1060; 
-      color: inherit !important;
-      text-decoration: none !important; 
-    }
+* {
+  font-family: 'Segoe UI';
+}
 
-    body{
-        background-color: #F5F5F5;
+body {
+  background-color: #f5f5f5;
+}
 
-    }
+/* body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+} */
 
-    .nav-link {
-      color: rgb(255, 255, 255) !important;
-      font-weight: 400;
-      font-size: large;
-      margin-right: 10px !important;
-      border-radius: 20px;
-    }
+.container-md {
+  margin-top: 3% !important;
+  padding-bottom: 15px;
+  background: rgb(255, 255, 255) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 5px !important;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3) !important;
+}
 
-    .navbar-nav .nav-link:hover {
-        font-weight: 700;
-    }
+h1 {
+  font-weight: 600 !important;
+  font-size: 50px !important;
+}
 
-    .container-md {
-      margin-top: 3% !important;
-      padding-bottom: 15px;
-      background: rgba(255, 255, 255, 0.15) !important;
-      backdrop-filter: blur(2px) saturate(180%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.8) !important;
-      border-radius: 5px !important;
-      box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2),
-                  inset 0 4px 20px rgba(255, 255, 255, 0.3) !important;
-    }
+h2 {
+  font-size: 40px;
+  padding-top: 2%;
+  padding-left: 1%;
+  font-weight: 600;
+}
+
+h3 {
+  padding-bottom: 1%;
+  padding-left: 1%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+h4 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.h4-small {
+  zoom: 80%;
+}
+
+p {
+  font-size: 20px;
+}
+
+.superTitle {
+  font-size: 96px !important;
+  font-weight: lighter !important;
+  margin: 10px;
+}
+
+.superTitle2 {
+  font-size: 96px !important;
+  font-weight: lighter !important;
+  margin: 10px;
+  margin: 25px auto 0 auto;
+  padding: 24px 20px;
+}
+
+.subTitle{
+  font-size: 48px !important;
+  font-weight: 400;
+  margin: 25px auto 0 auto;
+  padding: 24px 20px;
+  color: #878787;
+
+}
+.search-container{
+  position: relative;
+}
+.search-form {
+  /* Il contenitore padre deve essere RELATIVE per ancorare il bottone */
+  display: flex;
+  align-items: center; /* Allinea verticalmente input e bottone */
+    position: relative; 
+  margin: 20px;
+}
+.search-bar{
+  margin: 25px auto 0 auto;
+padding: 24px 20px;
+width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+}
+.search-submit{
+  position: absolute; 
+  right: 5px;
+  background-color: #FF8C00;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  transform: translateY(25%);
+  width: 100px;
+}
+.filters-container{
+  align-items: center;
+  margin: 20px;
+  display: flex;
+}
+.filter-button{
+  margin: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+.trending-container{
+  align-items: center;
+  margin: 10px;
+  display: flex;
+}
+.bi-arrow-right{
+  margin-bottom: 2%;
+}
+.card-container{
+    display: flex;
+  display: flex;
+
+}
+.card {
+  width: 300px; 
+  height: 400px; /* <--- ALTEZZA FISSA DEFINITA QUI */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  flex-direction: column; 
+  background-color: white;
+}
+.card-image {
+  /* Imposta l'altezza esattamente al 45% dell'altezza della card (400px * 0.45 = 180px) */
+  height: 45%; 
+  width: 100%;
+  
+  /* Garantisce che l'immagine copra lo spazio senza distorcersi */
+  object-fit: cover; 
+  display: block;
+}
+.card-content {
+  padding: 15px;
+  /* La parte del contenuto e del footer occuperà il restante 55% */
+  /* Utilizziamo flex-grow per riempire lo spazio rimanente */
+  flex-grow: 1; 
+  
+  /* Imposta un'altezza minima per prevenire problemi di layout se il testo è poco */
+  min-height: 100px; 
+}
+.card-cath{
+  color: #FF8C00;
+;
+}
+.card-footer {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-end; 
+}
+.card-button{
+  background-color: #FF8C00;
+  color: white;
+}
+
+.content-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.topbar {
+  width: 95%;
+  margin: 25px auto 0 auto;
+  background: #4a4a4a;
+  padding: 24px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand {
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.topbar-menu {
+  display: flex;
+  gap: 35px;
+}
+
+.topbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  opacity: 0.7;
+  transition: 0.25s;
+}
+
+.topbar-menu a:hover {
+  opacity: 1;
+}
+
+.topbar-menu .active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username {
+  font-size: 18px;
+  color: white;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.form {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form button[type="submit"] {
+  margin-top: 15px;
+}
+
+.name-header {
+  margin-bottom: 50px;
+}
