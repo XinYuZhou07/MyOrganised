@@ -65,6 +65,7 @@
   }
 
   .block {
+    margin-right: 90px;
     background: rgb(255, 255, 255);
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 5px;
@@ -85,7 +86,7 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   }
 
-  .spacer{
+  .spacer-S{
     margin-bottom: 40px;
   }
 
@@ -93,7 +94,7 @@
     margin-bottom: 60px;
   }
 
-  .spacer-H{
+  .spacer-L{
     margin-bottom: 80px;
   }
 
