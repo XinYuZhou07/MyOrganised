@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-Light#It.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-semiLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-semiLight#It.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI.ttf") format("truetype");
+  font-weight: 300;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI#It.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-semiBold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sUI";
+  src: url("fonts/sUI-semiBold#It.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
