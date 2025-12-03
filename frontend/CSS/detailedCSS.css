@@ -1,0 +1,104 @@
+.mainLayout {
+  display: grid;
+  grid-template-columns: 58% 38%;
+  gap: 2.5%;
+  align-items: start;
+}
+
+
+.leftColumn .block {
+  height: calc(100vh - 160px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rightColumn .block {
+  height: calc((100vh - 180px) / 2);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.dateRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 75px);
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 8px;
+}
+
+.calendar .day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 45px;
+  background: #fff;
+  font-weight: 500;
+}
+
+
+.calendar .day.today {
+  background: #F39C12;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(243,156,18,0.25);
+}
+
+.calendar .day.prevMonth {
+  color: #7e7e7e;
+}
+
+
+.calendarGrid .weekday {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8a8a8a;
+}
+
+
+.freeTime{
+    color: #8d7deb;
+    font-size: 25px;
+}
+
+.eventTitle{
+    font-size: 25px;
+}
+
+.eventDuration{
+    margin-bottom: -5px;
+}
+
+.eventSubtitle{
+    margin-top: -5px;
+    font-size: 18px;
+    color: #8a8a8a;
+}
+
+.eventCard{
+    border-radius: 5px;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2),
+            inset 0 4px 20px rgba(255, 255, 255, 0.3) !important;
+    margin: 5px;
+    padding: 10px;
+}
