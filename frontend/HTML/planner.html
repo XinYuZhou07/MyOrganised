@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOrganized-planner</title>
+
+    <!-- Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/fontSettings.css">
+    <link rel="stylesheet" href="../CSS/interCSS.css">
+    <link rel="stylesheet" href="../CSS/detailedCSS.css">
+    <link rel="stylesheet" href="../CSS/planner.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navBar">
+        <div class="navBar-L">
+            <span class="navBar-Brand">MyOrganized</span>
+            <div class="navBar-Link">
+                <a href="./home.html">Panoramica</a>
+                <a href="./store.html">Store</a>
+                <a href="#" class="Active">Planner</a>
+            </div>
+        </div>
+
+        <div class="navBar-R">
+            <span class="navBar-UsrName">John Appleseed</span>
+            <img class="navBar-Avatar" src="./img/defaultProfile.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- PAGINA -->
+    <div class="mainView">
+
+        <!-- STESSA LOGICA DELLA HOME, MA CON CLASSE IN PIÙ -->
+        <div class="mainLayout plannerLayout">
+
+            <!-- ========================= -->
+            <!--       COLONNA SINISTRA    -->
+            <!-- ========================= -->
+            <div class="rightColumn">
+
+                <!-- Titolo -->
+                <p class="superTitle">Planner</p>
+                <p class="subTitle">Preparati per nuovi eventi.</p>
+
+                <!-- Calendario (IDENTICO alla home: stesse classi) -->
+                <div class="block planner-calendar-block">
+                    <div class="metaTag">Calendario</div>
+                    <div class="elementTitle">Novembre</div>
+
+                    <hr style="margin: 12px 0; opacity: 0.25;">
+
+                    <div class="calendar">
+                        <div class="weekday">LUN</div>
+                        <div class="weekday">MAR</div>
+                        <div class="weekday">MER</div>
+                        <div class="weekday">GIO</div>
+                        <div class="weekday">VEN</div>
+                        <div class="weekday">SAB</div>
+                        <div class="weekday">DOM</div>
+
+                        <!-- giorni -->
+                        <div class="day prevMonth">27</div>
+                        <div class="day prevMonth">28</div>
+                        <div class="day prevMonth">29</div>
+                        <div class="day prevMonth">30</div>
+                        <div class="day prevMonth">31</div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+
+                        <div class="day">3</div><div class="day">4</div><div class="day">5</div>
+                        <div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div>
+
+                        <div class="day">10</div><div class="day">11</div><div class="day">12</div>
+                        <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+
+                        <div class="day">17</div><div class="day today">18</div><div class="day">19</div>
+                        <div class="day">20</div><div class="day">21</div><div class="day">22</div>
+
+                        <div class="day">23</div><div class="day">24</div><div class="day">25</div>
+                        <div class="day">26</div><div class="day">27</div><div class="day">28</div>
+                        <div class="day">29</div><div class="day">30</div>
+                    </div>
+                </div>
+
+                <!-- AI Suggestion -->
+                <div class="planner-ai">
+                    <div class="planner-ai-icon"><i class="bi bi-info-circle"></i></div>
+                    <div>
+                        <div class="planner-ai-title">Suggerimenti dall’IA</div>
+                        <div class="planner-ai-text">
+                            Lasciati ispirare dai suggerimenti basati sulla tua routine.
+                        </div>
+                        <div class="planner-ai-status">Attendo l’IA...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!--          COLONNA DESTRA  -->
+            <!-- ========================= -->
+            <div class="leftColumn">
+                <div class="block planner-right-block">
+
+                    <div class="planner-day-header">
+                        <div class="planner-day-left">
+                            <div class="planner-day-number">19</div>
+                            <div class="planner-day-meta">
+                                <div class="planner-day-weekday">Lunedì</div>
+                                <div class="planner-day-month">Novembre</div>
+                            </div>
+                        </div>
+                        <button class="planner-new-event">+ Nuovo Evento</button>
+                    </div>
+
+                    <div class="planner-day-divider"></div>
+
+                    <div class="planner-events-list">
+
+                        <div class="planner-event">
+                            <div class="planner-event-time">
+                                <div class="planner-event-time-main">10:00</div>
+                                <div class="planner-event-time-sub">1.5h</div>
+                            </div>
+                            <div class="planner-event-separator"></div>
+                            <div class="planner-event-body">
+                                <div class="planner-event-title">Inter Ikea Laboratory</div>
+                                <div class="planner-event-location">Ikea di Milano Corsico.</div>
+                            </div>
+                        </div>
+
+                        <!-- altri eventi identici... -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- /mainLayout -->
+    </div> <!-- /mainView -->
+
+</body>
+</html>
