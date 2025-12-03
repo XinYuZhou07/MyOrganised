@@ -17,7 +17,7 @@
                 <h1 class="h3 mb-3 fw-normal text-center">Accedi a MyOrganazed</h1>
 
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="LogEmail" placeholder="name@example.com">
+                    <input type="email" class="form-control" name="email" id="LogEmail" placeholder="name@example.com">
                     <label for="LogEmail">Email</label>
                 </div>
                 <div class="form-floating">
@@ -32,7 +32,10 @@
             </label>
                 </div> -->
 
-                <a href="./home.html" class="btn btn-primary w-100 py-2">Accedi</a>
+                <div class="btn btn-primary w-100 py-2" id="LogBtn">
+                    Accedi
+                </div>
+                <!-- <a href="./home.html" class="btn btn-primary w-100 py-2" id="LogBtn">Accedi</a> -->
                 <div class="redirection">
                     <p>Non hai un account? <a href="signin.html">Registrati</a></p>
                 </div>
@@ -42,6 +45,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../JS/log.js"></script>
 </body>
 
 </html>
