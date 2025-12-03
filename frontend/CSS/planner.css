@@ -1,0 +1,163 @@
+/* ========================= */
+/*   LAYOUT PAGINA PLANNER   */
+/* ========================= */
+
+/* Griglia principale del planner:
+   prima colonna = rightColumn (calendario)
+   seconda colonna = leftColumn (planner) */
+.plannerLayout {
+  display: grid;
+  grid-template-columns: 38% 58%;
+  gap: 2.5%;
+  align-items: start;
+}
+
+/* Titolo planner (sopra calendario) */
+.planner-left-header {
+  margin-bottom: 20px;
+}
+
+/* Il PLANNER (colonna sinistra = .leftColumn) deve essere alto tutta la pagina */
+.leftColumn .block {
+  height: calc(100vh - 160px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Il CALENDARIO (colonna destra = .rightColumn) occupa circa metà altezza,
+   così sotto ci sta il box IA */
+.rightColumn .block {
+  height: calc((100vh - 180px) / 2);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================= */
+/*        AI SUGGESTION      */
+/* ========================= */
+
+.planner-ai {
+  background: #4a4a4a;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+  width: calc(100% - 90px); /* stesso margine destro dei block */
+  margin-right: 90px;
+}
+
+
+.planner-ai-icon {
+  font-size: 22px;
+}
+
+/* ========================= */
+/*      BLOCCO DI DESTRA     */
+/* ========================= */
+
+/* Contenitore del planner del giorno (19 Lunedì ...) */
+.planner-right-block {
+  /* niente height qui: quella la gestisce .leftColumn .block */
+  display: flex;
+  flex-direction: column;
+}
+
+.planner-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.planner-day-left {
+  display: flex;
+}
+
+.planner-day-number {
+  font-size: 90px;
+  font-weight: 200;
+  line-height: 0.8;
+}
+
+.planner-day-meta {
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.planner-day-weekday {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.planner-day-month {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.planner-new-event {
+  border: none;
+  background: transparent;
+  color: #FF8C00;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.planner-day-divider {
+  border-top: 1px solid #d6d6d6;
+  margin: 22px 0;
+}
+
+/* lista eventi */
+.planner-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* evento singolo */
+.planner-event {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+}
+
+.planner-event-time {
+  width: 80px;
+  font-size: 16px;
+  color: #2c2c9f;
+}
+
+.planner-event-time-sub {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.planner-event-separator {
+  width: 1px;
+  height: 100%;
+  background-color: #d6d6d6;
+  margin: 0 18px;
+}
+
+.planner-event-body {
+  flex: 1;
+}
+
+.planner-event-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.planner-event-location {
+  font-size: 13px;
+  color: #777;
+}
