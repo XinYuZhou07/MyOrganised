@@ -74,27 +74,24 @@ Nel file `fontSettings.css` includi le varianti del font con i pesi corretti:
 
 ```css
 @font-face {
-  font-family: "Segoe UI";
-  src: url("./fonts/SegoeUI-Light.ttf") format("truetype");
-  font-weight: 300;
+  font-family: "sUI";
+  src: url("./fonts/sUI-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Segoe UI";
-  src: url("./fonts/SegoeUI-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "sUI";
+  src: url("./fonts/sUI-Light#It.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "Segoe UI";
-  src: url("./fonts/SegoeUI-Semibold.ttf") format("truetype");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Segoe UI";
-  src: url("./fonts/SegoeUI-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "sUI";
+  src: url("./fonts/sUI-semiLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
 }
 ```
 
@@ -102,7 +99,7 @@ E nel tuo CSS globale:
 
 ```css
 * {
-  font-family: "Segoe UI", sans-serif !important;
+  font-family: "sUI", sans-serif !important;
 }
 ```
 
