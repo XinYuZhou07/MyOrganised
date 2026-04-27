@@ -2,184 +2,168 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyOrganized-planner</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyOrganized - Planner</title>
 
-    <!-- Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/fontSettings.css">
-    <link rel="stylesheet" href="../CSS/interCSS.css">
-    <link rel="stylesheet" href="../CSS/detailedCSS.css">
-    <link rel="stylesheet" href="../CSS/planner.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS/fontSettings.css">
+  <link rel="stylesheet" href="../CSS/interCSS.css">
+  <link rel="stylesheet" href="../CSS/detailedCSS.css">
+  <link rel="stylesheet" href="../CSS/planner.css">
+  <link rel="stylesheet" href="../CSS/calendario.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navBar">
-        <div class="navBar-L">
-            <a class="navBar-Brand" href="./homePage.html " ">MyOrganized</a>
-            <div class="navBar-Link ">
-                <a href="./home.html ">Panoramica</a>
-                <a href="./store.html ">Store</a>
-                <a href="./planner.html " class="Active ">Planner</a>
-            </div>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="navbar-newEvent">
+    <div class="navbar-newEvent-L">
+      <a class="navbar-newEvent-back" href="./planner.html">
+        <i class="bi bi-arrow-left"></i>
+      </a>
 
-        <div class="navBar-R ">
-            <span class="navBar-UsrName ">John Appleseed</span>
-            <img class="navBar-Avatar " src="./img/defaultProfile.jpg " alt=" ">
-        </div>
+      <div class="navbar-newEvent-titleBlock">
+        <div class="main">Nuovo Evento</div>
+        <div class="sub">Planner</div>
+      </div>
     </div>
 
-    <!-- PAGINA -->
-    <div class="mainView ">
+    <a class="navbar-newEvent-brand" href="./homePage.html">MyOrganized</a>
+  </nav>
 
-        <!-- LAYOUT SPECIFICO NUOVO EVENTO -->
-        <div class="mainLayout newEvent-layout ">
+  <!-- PAGINA -->
+  <div class="mainView">
 
-            <div class="rightColumn ">
+    <div class="mainLayout newEvent-layout">
 
-                <div class="block planner-calendar-block ">
-                    <div class="metaTag ">Calendario</div>
-                    <div class="elementTitle ">Novembre</div>
+      <!-- COLONNA SINISTRA -->
+      <div class="rightColumn">
 
-                    <hr style="margin: 12px 0; opacity: 0.25; ">
+        <!-- CALENDARIO -->
+        <div class="block planner-calendar-block">
 
-                    <div class="calendar ">
-                        <div class="weekday ">LUN</div>
-                        <div class="weekday ">MAR</div>
-                        <div class="weekday ">MER</div>
-                        <div class="weekday ">GIO</div>
-                        <div class="weekday ">VEN</div>
-                        <div class="weekday ">SAB</div>
-                        <div class="weekday ">DOM</div>
+          <div class="metaTag">Calendario</div>
 
-                        <!-- giorni -->
-                        <div class="day prevMonth ">27</div>
-                        <div class="day prevMonth ">28</div>
-                        <div class="day prevMonth ">29</div>
-                        <div class="day prevMonth ">30</div>
-                        <div class="day prevMonth ">31</div>
-                        <div class="day ">1</div>
-                        <div class="day ">2</div>
+          <div class="cal-header-row">
+            <i class="bi bi-calendar3 cal-icon"></i>
 
-                        <div class="day ">3</div>
-                        <div class="day ">4</div>
-                        <div class="day ">5</div>
-                        <div class="day ">6</div>
-                        <div class="day ">7</div>
-                        <div class="day ">8</div>
-                        <div class="day ">9</div>
+            <div class="cal-month-row">
+              <button class="cal-month-btn" id="month-btn" type="button">
+                <div class="elementTitle" id="month-label">Novembre 2025</div>
+                <i class="bi bi-caret-down-fill cal-caret" id="cal-caret"></i>
+              </button>
 
-                        <div class="day ">10</div>
-                        <div class="day ">11</div>
-                        <div class="day ">12</div>
-                        <div class="day ">13</div>
-                        <div class="day ">14</div>
-                        <div class="day ">15</div>
-                        <div class="day ">16</div>
-
-                        <div class="day ">17</div>
-                        <div class="day today ">18</div>
-                        <div class="day ">19</div>
-                        <div class="day ">20</div>
-                        <div class="day ">21</div>
-                        <div class="day ">22</div>
-
-                        <div class="day ">23</div>
-                        <div class="day ">24</div>
-                        <div class="day ">25</div>
-                        <div class="day ">26</div>
-                        <div class="day ">27</div>
-                        <div class="day ">28</div>
-                        <div class="day ">29</div>
-                        <div class="day ">30</div>
-                    </div>
+              <div class="cal-dropdown" id="cal-dropdown">
+                <div class="cal-dd-year-row">
+                  <button class="cal-dd-year-btn" id="yr-prev" type="button">&#8592;</button>
+                  <span class="cal-dd-year-val" id="dd-year-val"></span>
+                  <button class="cal-dd-year-btn" id="yr-next" type="button">&#8594;</button>
                 </div>
 
-                <!-- LA TUA GIORNATA -->
-                <div class="block newEvent-dayAgenda ">
-                    <div class="newEvent-dayAgenda-header ">
-                        <div class="metaTag ">La tua Giornata</div>
-                        <div class="elementSubtitle ">Venerdì 19 Novembre</div>
-                    </div>
-
-                    <div class="newEvent-dayAgenda-list ">
-
-                        <div class="newEvent-agendaItem ">
-                            <div class="newEvent-agendaTime ">
-                                <span class="timeMain ">10:00</span>
-                                <span class="timeSub ">1.5h</span>
-                            </div>
-                            <div class="newEvent-agendaBody ">
-                                <div class="newEvent-agendaTitle ">Inter Ikea Laboratory</div>
-                                <div class="newEvent-agendaLocation ">Ikea di Milano Corsico.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="cal-dd-months" id="dd-months"></div>
+              </div>
             </div>
+          </div>
 
-            <div class="newEvent-right ">
+          <hr class="cal-hr">
 
-                <!-- Card principale form evento -->
-                <div class="block newEvent-formCard ">
-                    <!-- header giorno -->
-                    <div class="newEvent-dayHeader ">
-                        <div class="newEvent-dayNumber ">19</div>
-                        <div class="newEvent-dayMeta ">
-                            <div class="newEvent-dayWeekday ">Lunedì</div>
-                            <div class="newEvent-dayMonth ">Novembre</div>
-                        </div>
-                    </div>
-
-                    <!-- testo sopra form -->
-                    <div class="newEvent-formIntro ">
-                        <div class="newEvent-formIntro-small ">Crea un Nuovo Evento</div>
-                        <div class="newEvent-formIntro-bold ">Personalizza il tuo Promemoria.</div>
-                    </div>
-
-                    <!-- form -->
-                    <div class="newEvent-formFields ">
-                        <input type="text " class="newEvent-input " placeholder="Nome Evento ">
-                        <input type="text " class="newEvent-input " placeholder="Luogo ">
-
-                        <!-- riga orari -->
-                        <div class="newEvent-timeRow ">
-                            <div class="timeBlock ">
-                                <span class="timeLabel ">Dalle Ore:</span>
-                                <input type="time " class="newEvent-inputTime " value="18:05 ">
-                            </div>
-                            <div class="timeBlock ">
-                                <span class="timeLabel ">Alle Ore:</span>
-                                <input type="time " class="newEvent-inputTime " value="18:05 ">
-                            </div>
-                            <div class="timeDuration ">
-                                <div class="timeDuration-main ">1h</div>
-                                <div class="timeDuration-sub ">Durata Totale</div>
-                            </div>
-                        </div>
-
-                        <textarea class="newEvent-input newEvent-textarea " rows="3 " placeholder="Note "></textarea>
-                    </div>
-                </div>
-
-                <!-- Card Assistente Pianificazione (placeholder) -->
-                <div class="block newEvent-assistantCard ">
-                    <p class="superTitle ">Coming Soon</p>
-                    <p class="subTitle ">Fai che l'AI ti ispiri</p>
-                </div>
-
-            </div>
+          <div class="calendar" id="cal-grid"></div>
 
         </div>
+
+        <!-- LA TUA GIORNATA -->
+        <div class="block newEvent-dayAgenda">
+
+          <div class="newEvent-dayAgenda-header">
+            <div class="metaTag">La tua Giornata</div>
+            <div class="elementSubtitle">Venerdì 19 Novembre</div>
+          </div>
+
+          <div class="newEvent-dayAgenda-list">
+
+            <div class="newEvent-agendaItem">
+              <div class="newEvent-agendaTime">
+                <span class="timeMain">10:00</span>
+                <span class="timeSub">1.5h</span>
+              </div>
+
+              <div class="newEvent-agendaBody">
+                <div class="newEvent-agendaTitle">Inter Ikea Laboratory</div>
+                <div class="newEvent-agendaLocation">Ikea di Milano Corsico.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLONNA DESTRA -->
+      <div class="newEvent-right">
+
+        <!-- FORM EVENTO -->
+        <div class="block newEvent-formCard">
+
+          <div class="newEvent-dayHeader">
+            <div class="newEvent-dayNumber">19</div>
+
+            <div class="newEvent-dayMeta">
+              <div class="newEvent-dayWeekday">Lunedì</div>
+              <div class="newEvent-dayMonth">Novembre</div>
+            </div>
+          </div>
+
+          <div class="newEvent-formIntro">
+            <div class="newEvent-formIntro-small">Crea un Nuovo Evento</div>
+            <div class="newEvent-formIntro-bold">Personalizza il tuo Promemoria.</div>
+          </div>
+
+          <div class="newEvent-formFields">
+            <input type="text" class="newEvent-input" placeholder="Nome Evento">
+            <input type="text" class="newEvent-input" placeholder="Luogo">
+
+            <div class="newEvent-timeRow">
+
+              <div class="timeBlock">
+                <span class="timeLabel">Dalle Ore:</span>
+                <input type="time" class="newEvent-inputTime" value="18:05">
+              </div>
+
+              <div class="timeBlock">
+                <span class="timeLabel">Alle Ore:</span>
+                <input type="time" class="newEvent-inputTime" value="19:05">
+              </div>
+
+              <div class="timeDuration">
+                <div class="timeDuration-main">1h</div>
+                <div class="timeDuration-sub">Durata Totale</div>
+              </div>
+
+            </div>
+
+            <textarea class="newEvent-input newEvent-textarea" rows="3" placeholder="Note"></textarea>
+          </div>
+
+        </div>
+
+        <!-- ASSISTENTE -->
+        <div class="block newEvent-assistantCard">
+          <p class="superTitle">Coming Soon</p>
+          <p class="subTitle">Fai che l'AI ti ispiri</p>
+        </div>
+
+      </div>
+
     </div>
+  </div>
+
+  <!-- JS -->
+  <script src="../JS/calendario.js"></script>
 
 </body>
 
