@@ -1,4 +1,4 @@
-# MyOrganazed – Daily Planner Personalizzato
+# MyOrganized – Daily Planner Personalizzato
 
 MyOrganasied è un **daily planner intelligente e personalizzabile** che aiuta studenti, lavoratori e persone impegnate a organizzare la giornata in modo semplice e visivo.
 
