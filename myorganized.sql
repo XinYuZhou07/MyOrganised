@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 22, 2026 alle 11:32
+-- Creato il: Apr 27, 2026 alle 11:33
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `events` (
   `id` int(11) NOT NULL,
-  `idUsr` int(11) DEFAULT NULL,
-  `idProp` int(11) DEFAULT NULL,
+  `idUsr` int(11) NOT NULL DEFAULT 0,
+  `idProp` int(11) NOT NULL DEFAULT 0,
   `title` varchar(50) DEFAULT NULL,
   `desciz` varchar(100) DEFAULT NULL,
   `position` text DEFAULT NULL,
@@ -77,6 +77,14 @@ CREATE TABLE `state` (
   `desciz` varchar(50) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dump dei dati per la tabella `state`
+--
+
+INSERT INTO `state` (`id`, `desciz`) VALUES
+(1, 'Attivo'),
+(2, 'Disattivo');
+
 -- --------------------------------------------------------
 
 --
@@ -98,10 +106,18 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
   `psw` varchar(100) DEFAULT NULL,
-  `idState` int(11) DEFAULT NULL,
+  `idState` int(11) NOT NULL DEFAULT 1,
   `name` varchar(50) DEFAULT NULL,
   `surname` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `psw`, `idState`, `name`, `surname`) VALUES
+(1, 'prova1@gmail.com', '123', 1, 'prova', 'provetta'),
+(2, 'prova2@gmail.com', '234', 1, 'prova22', 'pp');
 
 -- --------------------------------------------------------
 
@@ -187,13 +203,19 @@ ALTER TABLE `routines`
 -- AUTO_INCREMENT per la tabella `state`
 --
 ALTER TABLE `state`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `tags`
 --
 ALTER TABLE `tags`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `usr-routines`

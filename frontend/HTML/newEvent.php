@@ -1,3 +1,7 @@
+<?php
+include "connect_db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -129,46 +133,60 @@
             <div class="newEvent-right ">
 
                 <!-- Card principale form evento -->
-                <div class="block newEvent-formCard ">
-                    <!-- header giorno -->
-                    <div class="newEvent-dayHeader ">
-                        <div class="newEvent-dayNumber ">19</div>
-                        <div class="newEvent-dayMeta ">
-                            <div class="newEvent-dayWeekday ">Lunedì</div>
-                            <div class="newEvent-dayMonth ">Novembre</div>
-                        </div>
-                    </div>
-
-                    <!-- testo sopra form -->
-                    <div class="newEvent-formIntro ">
-                        <div class="newEvent-formIntro-small ">Crea un Nuovo Evento</div>
-                        <div class="newEvent-formIntro-bold ">Personalizza il tuo Promemoria.</div>
-                    </div>
-
-                    <!-- form -->
-                    <div class="newEvent-formFields ">
-                        <input type="text " class="newEvent-input " placeholder="Nome Evento ">
-                        <input type="text " class="newEvent-input " placeholder="Luogo ">
-
-                        <!-- riga orari -->
-                        <div class="newEvent-timeRow ">
-                            <div class="timeBlock ">
-                                <span class="timeLabel ">Dalle Ore:</span>
-                                <input type="time " class="newEvent-inputTime " value="18:05 ">
-                            </div>
-                            <div class="timeBlock ">
-                                <span class="timeLabel ">Alle Ore:</span>
-                                <input type="time " class="newEvent-inputTime " value="18:05 ">
-                            </div>
-                            <div class="timeDuration ">
-                                <div class="timeDuration-main ">1h</div>
-                                <div class="timeDuration-sub ">Durata Totale</div>
+                 
+                    <div class="block newEvent-formCard ">
+                        <form action="addEvent.php" method="post">
+                        <!-- header giorno -->
+                        <!-- TODO: da sistemare con il calendario -->
+                        <!--
+                        <div class="newEvent-dayHeader ">
+                            <div class="newEvent-dayNumber ">19</div> 
+                            <div class="newEvent-dayMeta ">
+                                <div class="newEvent-dayWeekday ">Lunedì</div>
+                                <div class="newEvent-dayMonth ">Novembre</div>
                             </div>
                         </div>
+                        -->
+                        
+                        <!-- testo sopra form -->
+                        <div class="newEvent-formIntro ">
+                            <div class="newEvent-formIntro-small ">Crea un Nuovo Evento</div>
+                            <div class="newEvent-formIntro-bold ">Personalizza il tuo Promemoria.</div>
+                        </div>
 
-                        <textarea class="newEvent-input newEvent-textarea " rows="3 " placeholder="Note "></textarea>
+                        <!-- form -->
+                        <div class="newEvent-formFields ">
+                            <input type="text " class="newEvent-input " name="nameEvent" placeholder="Nome Evento ">
+                            <input type="text " class="newEvent-input " name="placeEvent" placeholder="Luogo ">
+
+                            <!-- riga orari -->
+                            <div class="newEvent-timeRow ">
+                                <div class="timeBlock ">
+                                    <span class="timeLabel ">Da:</span>
+                                    <!-- <input type="time " class="newEvent-inputTime " > -->
+                                    <input type="datetime-local" name="dateTimeIn" id="">
+                                </div>
+                                <div class="timeBlock ">
+                                    <span class="timeLabel ">A:</span>
+                                    <!-- <input type="time " class="newEvent-inputTime " > -->
+                                    <input type="datetime-local" name="dateTimeFin" id="">
+                                </div>
+                                <!--
+                                <div class="timeDuration ">
+                                    <div class="timeDuration-main ">1h</div>
+                                    <div class="timeDuration-sub ">Durata Totale</div>
+                                </div>
+                                -->
+                                
+                            </div>
+
+                            <textarea class="newEvent-input newEvent-textarea " rows="3 " placeholder="Note " name="descriz" ></textarea>
+                        </div>
+                        <button type="submit">Aggiungi</button>
+                        </form>
                     </div>
-                </div>
+                   
+                
 
                 <!-- Card Assistente Pianificazione (placeholder) -->
                 <div class="block newEvent-assistantCard ">
