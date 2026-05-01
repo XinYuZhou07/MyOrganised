@@ -161,3 +161,46 @@
     border-radius: 50%;
     object-fit: cover;
   }
+
+
+  .navbar-newEvent {
+      width: 95%;
+      margin: 25px auto 0 auto;
+      background: #4a4a4a;
+      padding: 16px 24px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+    .navbar-newEvent-L {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .navbar-newEvent-back {
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      opacity: 0.85;
+      line-height: 1;
+    }
+    .navbar-newEvent-titleBlock .main {
+      font-size: 20px;
+      font-weight: 400;
+      color: white;
+      line-height: 1.15;
+    }
+    .navbar-newEvent-titleBlock .sub {
+      font-size: 13px;
+      font-weight: 200;
+      color: rgba(255,255,255,0.55);
+      line-height: 1;
+    }
+    .navbar-newEvent-brand {
+      font-size: 22px;
+      font-weight: 300;
+      color: white;
+      text-decoration: none;
+    }

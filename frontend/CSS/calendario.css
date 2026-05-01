@@ -1,0 +1,199 @@
+/* calendario.css – MyOrganized */
+
+.planner-calendar-block {
+  max-width: 520px;
+}
+
+.cal-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.cal-icon {
+  font-size: 26px;
+  color: #555;
+}
+
+.cal-hr {
+  margin: 14px 0;
+  opacity: 0.2;
+}
+
+.cal-month-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.cal-month-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.cal-month-btn .elementTitle {
+  margin: 0;
+}
+
+.cal-caret {
+  font-size: 13px;
+  color: #aaa;
+  transition: transform 0.2s;
+}
+
+.cal-caret.open {
+  transform: rotate(180deg);
+}
+
+.cal-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  padding: 12px;
+  min-width: 280px;
+}
+
+.cal-dropdown.open {
+  display: block;
+}
+
+.cal-dd-year-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cal-dd-year-val {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cal-dd-year-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-dd-year-btn:hover {
+  background: #f5f5f5;
+}
+
+.cal-dd-months {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.cal-dd-item {
+  padding: 8px 6px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 300;
+  color: #333;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.cal-dd-item:hover {
+  background: #f5f5f5;
+}
+
+.cal-dd-item.active {
+  background: #f5a623;
+  color: #fff;
+  font-weight: 500;
+  border-color: #f5a623;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.calendar .weekday {
+  font-size: 11px;
+  font-weight: 600;
+  color: #aaa;
+  padding: 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.calendar .day {
+  font-size: 14px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  font-weight: 300;
+}
+
+.calendar .day:hover {
+  background: #f5f5f5;
+}
+
+.calendar .day.prevMonth {
+  color: #bbb;
+  border-color: transparent;
+}
+
+.calendar .day.sunday {
+  color: #d64f72;
+  border-color: #fce4ec;
+}
+
+.calendar .day.today {
+  background: #f5a623;
+  color: #fff;
+  border-color: #f5a623;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.35);
+}
+
+.calendar .day.selected {
+  background: #c0620a;
+  color: #fff;
+  border-color: #c0620a;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(192, 98, 10, 0.35);
+}
+
+.calendar .day.sunday.today,
+.calendar .day.sunday.selected {
+  color: #fff;
+}

@@ -3,18 +3,20 @@ include "connect_db.php";
 
 $nome = $_POST["nameEvent"];
 $luogo = $_POST["placeEvent"];
-$dateIn = $_POST["dateTimeIn"];
-$dateFin = $_POST["dateTimeFin"];
+$dateIn = $_POST["dateEvent"] . " " . $_POST["startTime"] . ":00";
+$dateFin = $_POST["dateEvent"] . " " . $_POST["endTime"] . ":00";
 
 $descriz = $_POST["descriz"];
 
 //TODO: inserire id utente da sessione
-$query = "INSERT INTO events (idUsr, title, descriz, POSITION, START, end) VALUES (1, '". $nome ."', '". $descriz ."', '". $luogo ."', '". $dateIn ."', '. $dateFin .') ";
+$query = "INSERT INTO events (idUsr, title, descriz, POSITION, START, end) VALUES (1, '". $nome ."', '". $descriz ."', '". $luogo ."', '". $dateIn ."', '". $dateFin ."') ";
 
+//echo "Inizio: " . $dateIn;
+//echo "Fine: " . $dateFin;
 
 if($conn->query($query) === TRUE){
     //echo "Evento aggiunto con successo";
-    header("Location: planner.html");
+    //header("Location: planner.html");
 }else{
     echo "Errore";
 }
