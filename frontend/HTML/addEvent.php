@@ -1,5 +1,6 @@
 <?php
-include "connect_db.php";
+include "../APIs/services/DBconnect.php";
+include "../APIs/services/usrCheck.php";
 
 $nome = $_POST["nameEvent"];
 $luogo = $_POST["placeEvent"];

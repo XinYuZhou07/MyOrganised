@@ -1,6 +1,6 @@
 <?php
 
-include("connect_db.php");
+include("DBconnect.php");
 
 if (isset($_SESSION['user_id'])) {
     $stmt = $conn->prepare("SELECT id FROM users WHERE id = " . $_SESSION['user_id']);

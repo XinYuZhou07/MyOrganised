@@ -3,7 +3,8 @@
 // Restituisce gli eventi di un dato giorno come JSON
 // Chiamata: get_events.php?date=YYYY-MM-DD
 
-include "connect_db.php";
+include "../APIs/services/DBconnect.php";
+include "../APIs/services/usrCheck.php";
 
 header("Content-Type: application/json; charset=UTF-8");
 

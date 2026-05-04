@@ -23,7 +23,7 @@ document.getElementById('LogBtn').addEventListener('click', async () => {
     formData.append('email', email);
     formData.append('password', password);
 
-    const res = await fetch('../APIs/usrLogin.php', {
+    const res = await fetch('../APIs/usr/login.php', {
         method: 'POST',
         body: formData
     });

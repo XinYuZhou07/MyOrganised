@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include "usrCheck.php";
-    include "connect_db.php";
+    include "../services/usrCheck.php";
+    include "../services/DBconnect.php";
 
     $name = $_POST['name'] ?? null;
     $surname = $_POST['surname'] ?? null;

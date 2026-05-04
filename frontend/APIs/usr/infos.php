@@ -2,11 +2,11 @@
     header('Content-Type: application/json');
     
     session_start();
-    include "usrCheck.php";
+    include "../services/usrCheck.php";
     if(http_response_code() === 401) {
         exit;
     }
-    include "connect_db.php";
+    include "../services/DBconnect.php";
     
 
     $stmt = $conn->prepare("Select * from users where id = " . $_SESSION['user_id']);
