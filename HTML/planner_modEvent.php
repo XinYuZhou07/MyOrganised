@@ -518,7 +518,7 @@ if($result->num_rows > 0){
             <div class="newEvent-formIntro-bold">Personalizza il tuo Promemoria.</div>
           </div>
 
-          <form action="modEvent.php" method="post">
+          <form action="../APIs/events/edit.php" method="post">
             <div class="newEvent-formFields">
 
               <div class="newEvent-fieldGroup">
@@ -560,7 +560,7 @@ if($result->num_rows > 0){
 
             </div>
           </form>
-          <form action="delEvent.php" method="post">
+          <form action="../APIs/events/delete.php" method="post">
             <input type="hidden" name="id_evnt" value="<?php echo $_GET['id_evnt'] ?>">
             <button class="newEvent-delBtn">Elimina Evento</button>
           </form>
@@ -570,7 +570,7 @@ if($result->num_rows > 0){
         <!-- ASSISTANT CARD -->
         <div class="block newEvent-assistantCard">
           <p class="superTitle">Coming Soon</p>
-          <p class="subTitle">Fai che l'AI ti ispiri</p>
+          <p class="subTitle">Sezione AI</p>
         </div>
 
       </div><!-- fine right -->

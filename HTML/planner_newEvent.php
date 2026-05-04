@@ -109,7 +109,7 @@ include "../APIs/services/usrCheck.php";
             <div class="newEvent-formIntro-bold">Personalizza il tuo Promemoria.</div>
           </div>
 
-          <form action="addEvent.php" method="post">
+          <form action="../APIs/events/new.php" method="post">
             <div class="newEvent-formFields">
 
               <div class="newEvent-fieldGroup">
@@ -156,7 +156,7 @@ include "../APIs/services/usrCheck.php";
         <!-- ASSISTANT CARD -->
         <div class="block newEvent-assistantCard">
           <p class="superTitle">Coming Soon</p>
-          <p class="subTitle">Fai che l'AI ti ispiri</p>
+          <p class="subTitle">Sezione AI</p>
         </div>
 
       </div>

@@ -13,7 +13,7 @@
 
 // Includi la connessione al DB se non è già stata fatta
 if (!isset($conn)) {
-    require_once 'connect_db.php';
+    require_once '../APIs/services/DBconnect.php';
 }
 
 // Data odierna

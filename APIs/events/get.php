@@ -19,7 +19,7 @@ if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
 
 // ── Query: tutti gli eventi dell'utente per quella data ──────────────────────
 // TODO: sostituire 1 con l'id utente dalla sessione ($_SESSION['idUsr'])
-$idUsr = 1;
+$idUsr = $_SESSION['user_id'];
 
 $stmt = $conn->prepare("
     SELECT
