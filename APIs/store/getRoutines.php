@@ -128,11 +128,16 @@
         ];
     }
 
+    
+    return $tagsInfos;
+
     $wayOut = [
         'routines' => $tagsInfos
     ];
 
     http_response_code(200);
     echo json_encode($wayOut);
+
+    
 
 ?>
