@@ -1,6 +1,6 @@
 <?php
 
-    //header('Content-Type: application/json');
+    header('Content-Type: application/json');
     session_start();
     include "../services/DBconnect.php";
     include "../services/usrCheck.php";
@@ -35,7 +35,7 @@
     $stmt->execute();
     $res = $stmt->get_result();
 
-    /*
+    
     $tagsInfos = [];
     while ($row = $res->fetch_assoc()) {
         $tagsInfos[] = [
@@ -48,14 +48,14 @@
             'proposalsQta' => $row['proposalsQta']
         ];
     }
-        */
+        
 
-    /*
+    
     $wayOut = [
         'routines' => $tagsInfos
     ];
 
     http_response_code(200);
     echo json_encode($wayOut);
-    */
+    
 ?>
