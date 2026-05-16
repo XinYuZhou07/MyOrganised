@@ -47,10 +47,12 @@
                 <a href="./planner.html">Planner</a>
             </div>
         </div>
-        <div class="navBar-R">
-            <span class="navBar-UsrName">John Appleseed</span>
-            <img class="navBar-Avatar" src="./img/defaultProfile.jpg" alt="Avatar">
-        </div>
+        <a href="./profile-info.php">
+            <div class="navBar-R">
+                <span class="navBar-UsrName">John Appleseed</span>
+                <img class="navBar-Avatar" src="./img/defaultProfile.jpg" alt="">
+            </div>
+        </a>
     </div>
 
     <div class="mainView">
@@ -239,7 +241,7 @@ function renderEvents(events, dateStr) {
     });
 }
 
-// 🔥 ASCOLTA IL TUO INPUT (coerente col resto del progetto)
+// ASCOLTA IL TUO INPUT (coerente col resto del progetto)
 inputDate.addEventListener("change", function () {
     const dateStr = inputDate.value;
     const dateObj = parseDate(dateStr);

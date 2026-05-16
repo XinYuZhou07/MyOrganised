@@ -6,8 +6,9 @@
     $name = $_POST['name'] ?? null;
     $surname = $_POST['surname'] ?? null;
     $email = $_POST['email'] ?? null;
+    $avatar = $_POST['avatar'] ?? null;
 
-    if (!$name && !$surname && !$email) {
+    if (!$name && !$surname && !$email && !$avatar) {
         http_response_code(400);
         exit;
     }else{
@@ -23,7 +24,12 @@
             $stmt = $conn->prepare("UPDATE users SET `email` = '" . $email . "' where id = " . $_SESSION['user_id']);
             $stmt->execute();
         }
+        if($avatar){
+            $stmt = $conn->prepare("UPDATE users SET `avatar` = '" . $avatar . "' where id = " . $_SESSION['user_id']);
+            $stmt->execute();
+        }
         http_response_code(200);
+        header("Location: ../../HTML/planner.html");
     }
 
 ?>
