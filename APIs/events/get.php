@@ -1,8 +1,7 @@
 <?php
 session_start();
-$base = '/Applications/MAMP/htdocs/MyOrganized/APIs/services/';
-include($base . 'DBconnect.php');
-include($base . 'usrCheck.php');
+//include "../services/usrCheck.php";
+include "../services/DBconnect.php";
 
 header("Content-Type: application/json; charset=UTF-8");
 
